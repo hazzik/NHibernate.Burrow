@@ -5,7 +5,7 @@ namespace NHibernate.Burrow.Configuration {
     /// <summary>
     /// Configuration Section for a Persistence Unit
     /// </summary>
-    public class PersistenceUnitElement : ConfigurationElement{
+    public class PersistenceUnitElement : ConfigurationElement, IPersistenceUnitCfg {
         /// <summary>
         /// 
         /// </summary>
