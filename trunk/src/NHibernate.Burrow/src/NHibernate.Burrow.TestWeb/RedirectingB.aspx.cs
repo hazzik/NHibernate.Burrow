@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using NHibernate.Burrow.Test.MockEntities;
-using NHibernate.Burrow.Test.PersistenceTests;
+using NHibernate.Burrow.Test.UtilTests.DAO;
 
 public partial class RedirectB : System.Web.UI.Page
 {
