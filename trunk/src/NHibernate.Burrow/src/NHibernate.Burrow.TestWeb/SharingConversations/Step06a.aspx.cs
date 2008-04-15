@@ -9,8 +9,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using NHibernate.Burrow;
+using NHibernate.Burrow.WebUtil.Attributes;
 
-public partial class SharingConversations_Step07 : System.Web.UI.Page
+[WorkSpaceInfo("SomeOtherWorkSpace")]
+public partial class SharingConversations_Step06a : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -29,25 +31,15 @@ public partial class SharingConversations_Step07 : System.Web.UI.Page
             if (conversation.Id.Equals(lastConversationId))
                 throw new Exception("The conversation is same that previous, the new conversation was not created");
 
-            Checker.CheckSpanningConversations(1);
-
-            conversation.SpanWithPostBacks();
-            
-            Checker.CheckSpanningConversations(2);
-
-            conversation.FinishSpan();
-            Checker.CheckSpanningConversations(1);
+           
         }
     }
 
     protected void btnClose_Click(object sender, EventArgs e)
     {
-        Facade facade = new Facade();
-        IConversation conversation = facade.CurrentConversation;
-        Session["continue"] = true;
+    
+        Session["continue_a"] = true;
 
-        conversation.FinishSpan();
-        Checker.CheckSpanningConversations(1);
 
         hdClose.Value = "1";
     }
