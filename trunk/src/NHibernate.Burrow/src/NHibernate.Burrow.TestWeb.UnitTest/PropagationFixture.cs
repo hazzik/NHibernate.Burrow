@@ -12,7 +12,7 @@ namespace NHibernate.Burrow.TestWeb.UnitTest
         {
             GoTo("Propagation/Default.aspx");
             IE.Link("BurrowLink1").Click();
-            Assert.IsTrue(IE.ContainsText("Test Passed"));
+            AssertTestSuccessMessageShown();
         }
     }
 }

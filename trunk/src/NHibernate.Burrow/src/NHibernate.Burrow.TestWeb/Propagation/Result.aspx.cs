@@ -16,5 +16,6 @@ public partial class Propagation_Result : System.Web.UI.Page
     {
         Checker.AssertEqual(new BurrowFramework().CurrentConversation.IsSpanning, true);
         Checker.AssertEqual( Session["conversationId"] , new BurrowFramework().CurrentConversation.Id);
+        SuccessMessage1.Show();
     }
 }
